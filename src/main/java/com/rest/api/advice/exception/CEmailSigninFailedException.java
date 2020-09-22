@@ -1,7 +1,12 @@
 package com.rest.api.advice.exception;
 
 public class CEmailSigninFailedException extends RuntimeException {
-    public CEmailSigninFailedException(String msg, Throwable t) {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public CEmailSigninFailedException(String msg, Throwable t) {
         super(msg, t);
     }
 

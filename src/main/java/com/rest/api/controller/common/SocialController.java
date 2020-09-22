@@ -1,16 +1,16 @@
 package com.rest.api.controller.common;
 
-import com.google.gson.Gson;
-import com.rest.api.service.social.KakaoService;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.rest.api.service.social.KakaoService;
+
+import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 @Controller
@@ -18,8 +18,8 @@ import org.springframework.web.servlet.ModelAndView;
 public class SocialController {
 
     private final Environment env;
-    private final RestTemplate restTemplate;
-    private final Gson gson;
+    //private final RestTemplate restTemplate;
+    //private final Gson gson;
     private final KakaoService kakaoService;
 
     @Value("${spring.url.base}")

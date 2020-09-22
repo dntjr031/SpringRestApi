@@ -1,7 +1,12 @@
 package com.rest.api.advice.exception;
 
 public class CUserNotFoundException extends RuntimeException {
-    public CUserNotFoundException(String msg, Throwable t) {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public CUserNotFoundException(String msg, Throwable t) {
         super(msg, t);
     }
 

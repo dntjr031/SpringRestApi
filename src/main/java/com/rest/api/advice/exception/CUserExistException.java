@@ -1,7 +1,12 @@
 package com.rest.api.advice.exception;
 
 public class CUserExistException extends RuntimeException {
-    public CUserExistException(String msg, Throwable t) {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public CUserExistException(String msg, Throwable t) {
         super(msg, t);
     }
 

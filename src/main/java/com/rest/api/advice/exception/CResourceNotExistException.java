@@ -1,7 +1,12 @@
 package com.rest.api.advice.exception;
 
 public class CResourceNotExistException extends RuntimeException {
-    public CResourceNotExistException(String msg, Throwable t) {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public CResourceNotExistException(String msg, Throwable t) {
         super(msg, t);
     }
 

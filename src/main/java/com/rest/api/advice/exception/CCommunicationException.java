@@ -1,7 +1,12 @@
 package com.rest.api.advice.exception;
 
 public class CCommunicationException extends RuntimeException {
-    public CCommunicationException(String msg, Throwable t) {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public CCommunicationException(String msg, Throwable t) {
         super(msg, t);
     }
 

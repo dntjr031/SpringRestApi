@@ -15,7 +15,11 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Board extends CommonDateEntity implements Serializable {
-    @Id
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long boardId;
     @Column(nullable = false, length = 100)

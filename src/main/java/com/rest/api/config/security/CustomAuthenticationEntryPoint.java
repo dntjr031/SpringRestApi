@@ -14,6 +14,7 @@ import java.io.IOException;
 public class CustomAuthenticationEntryPoint implements AuthenticationEntryPoint {
     @Override
     public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException ex) throws IOException {
+    	log.info("CustomAuthenticationEntryPoint-commence start");
         response.sendRedirect("/exception/entrypoint");
     }
 }

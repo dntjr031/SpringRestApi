@@ -1,6 +1,14 @@
 package com.rest.api.service.board;
 
-import com.rest.api.advice.exception.CForbiddenWordException;
+import java.util.List;
+import java.util.Optional;
+
+import javax.transaction.Transactional;
+
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.stereotype.Service;
+
 import com.rest.api.advice.exception.CNotOwnerException;
 import com.rest.api.advice.exception.CResourceNotExistException;
 import com.rest.api.advice.exception.CUserNotFoundException;
@@ -14,19 +22,9 @@ import com.rest.api.repo.UserJpaRepo;
 import com.rest.api.repo.board.BoardJpaRepo;
 import com.rest.api.repo.board.PostJpaRepo;
 import com.rest.api.service.cache.CacheSevice;
+
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.cache.annotation.CacheEvict;
-import org.springframework.cache.annotation.CachePut;
-import org.springframework.cache.annotation.Cacheable;
-import org.springframework.stereotype.Service;
 
-import javax.transaction.Transactional;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
-
-@Slf4j
 @Service
 @Transactional
 @RequiredArgsConstructor

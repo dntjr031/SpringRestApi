@@ -1,22 +1,34 @@
 package com.rest.api.entity.board;
 
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.rest.api.entity.User;
 import com.rest.api.entity.common.CommonDateEntity;
+
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.hibernate.annotations.Proxy;
-
-import javax.persistence.*;
-import java.io.Serializable;
 
 @Entity
 @Getter
 @Setter
 @NoArgsConstructor
 public class Post extends CommonDateEntity implements Serializable {
-    @Id
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long postId;
     @Column(nullable = false, length = 50)
