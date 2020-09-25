@@ -9,17 +9,17 @@ logging:
 spring:
   profiles: alpha
   datasource:
-    url: jdbc:mysql://localhost:3306/daddyprogrammer?useUnicode=true&autoReconnect=true&characterEncoding=utf8&allowMultiQueries=true&useSSL=false&serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/rest_api?useUnicode=true&autoReconnect=true&characterEncoding=utf8&allowMultiQueries=true&useSSL=false&serverTimezone=UTC
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: positive2
   jpa:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     properties.hibernate:
-      hbm2ddl.auto: none
+      hbm2ddl.auto: update
       format_sql: true
     showSql: true
-    generate-ddl: false
+    generate-ddl: true
   url:
     base: http://dev-api.daddyprogrammer.org
   redis:
